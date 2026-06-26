@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>长孙博题库 · 中国近现代史名词解释+论述</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;color:#2c2416;line-height:1.8}
+h1{text-align:center;padding:24px;color:#c0392b;font-size:1.5em}
+.tabs{display:flex;justify-content:center;gap:12px;margin:16px}
+.tab{padding:10px 32px;background:#fff;border:1px solid #d5cfc0;border-radius:4px;cursor:pointer;font-size:1em;font-family:inherit}
+.tab.active{background:#c0392b;color:#fff;border-color:#c0392b}
+.pages{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:16px}
+.page-btn{padding:6px 12px;background:#fff;border:1px solid #d5cfc0;border-radius:3px;cursor:pointer;font-size:0.85em;font-family:inherit;min-width:50px;text-align:center}
+.page-btn:hover{border-color:#c0392b}
+.page-btn.active{background:#3a7ca5;color:#fff}
+.viewer{text-align:center;padding:16px}
+.viewer img{max-width:100%;border:1px solid #d5cfc0;box-shadow:0 2px 16px rgba(0,0,0,0.1)}
+.nav{padding:16px;text-align:center}
+.nav button{padding:8px 24px;margin:4px;font-size:1em;font-family:inherit;cursor:pointer;background:#fff;border:1px solid #d5cfc0;border-radius:4px}
+.nav button:hover{background:#c0392b;color:#fff}
+.top-link{display:block;text-align:center;padding:16px}
+.top-link a{color:#3a7ca5}
+</style>
+</head>
+<body>
+<h1>长孙博 · 中国近现代史题库</h1>
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('mingci')">名词解释 (63页)</button>
+  <button class="tab" onclick="switchTab('lunshu')">论述题 (103页)</button>
+</div>
+<div class="pages" id="page-nav"></div>
+<div class="nav">
+  <button onclick="prevPage()">◀ 上一页</button>
+  <span id="page-info" style="margin:0 16px">Page 1</span>
+  <button onclick="nextPage()">下一页 ▶</button>
+</div>
+<div class="viewer" id="viewer">
+  <img id="page-img" src="" alt="题库页面">
+</div>
+<div class="top-link"><a href="../">← 返回知识库首页</a></div>
+
+<script>
+let currentTab = 'mingci';
+let currentPage = 1;
+const maxPages = {mingci:63, lunshu:103};
+
+function switchTab(tab) {
+  currentTab = tab;
+  currentPage = 1;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.tab:nth-child(${tab==='mingci'?1:2})`).classList.add('active');
+  renderPageNav();
+  showPage(1);
+}
+
+function renderPageNav() {
+  const nav = document.getElementById('page-nav');
+  const total = maxPages[currentTab];
+  let html = '';
+  for (let i = 1; i <= total; i++) {
+    html += `<button class="page-btn${i===currentPage?' active':''}" onclick="showPage(${i})">${i}</button>`;
+  }
+  nav.innerHTML = html;
+}
+
+function showPage(n) {
+  currentPage = n;
+  const total = maxPages[currentTab];
+  document.getElementById('page-info').textContent = `Page ${n} / ${total}`;
+  const p = String(n).padStart(3, '0');
+  document.getElementById('page-img').src = `${currentTab}/page_${p}.png`;
+  document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+  const btns = document.querySelectorAll('.page-btn');
+  if (btns[n-1]) btns[n-1].classList.add('active');
+}
+
+function prevPage() {
+  if (currentPage > 1) showPage(currentPage - 1);
+}
+function nextPage() {
+  if (currentPage < maxPages[currentTab]) showPage(currentPage + 1);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') prevPage();
+  if (e.key === 'ArrowRight') nextPage();
+});
+
+renderPageNav();
+showPage(1);
+</script>
+</body>
+</html>
