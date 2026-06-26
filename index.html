@@ -62,6 +62,7 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
     <h3 style="margin-top:12px">📑 快捷目录</h3><div id="tab4-toc" style="max-height:300px;overflow-y:auto"></div>
   </div>
   <div id="tab4-main">
+    <div id="tab4-timeline-viz" style="background:#fff;border:1px solid #d5cfc0;border-radius:8px;padding:16px 20px;margin-bottom:12px;overflow-x:auto"></div>
     <div id="tab4-stats" style="margin-bottom:12px"></div>
     <div id="tab4-list"></div>
     <div id="tab4-detail" style="display:none"></div>
@@ -162,8 +163,28 @@ function tab4Filtered(){var d=getTab4Data();if(tab4Period)d=d.filter(function(e)
 
 function renderTab4(){
   document.getElementById('main-area').style.display='none';document.getElementById('tab4-layout').style.display='flex';
-  renderTab4Sidebar();renderTab4List();renderTab4Stats();
+  renderTab4Sidebar();renderTab4TimelineViz();renderTab4List();renderTab4Stats();
 }
+function renderTab4TimelineViz(){
+  var all=getTab4Data();var container=document.getElementById('tab4-timeline-viz');
+  var totalWidth=100;var periodWidth=totalWidth/TAB4_PERIODS.length;
+  var maxCount=Math.max.apply(null,TAB4_PERIODS.map(function(p){return all.filter(function(e){return e.period===p.id}).length}));
+  var h='<div style=position:relative;height:80px>';
+  // Line
+  h+='<div style=position:absolute;top:30px;left:0;right:0;height:3px;background:#d5cfc0></div>';
+  // Dots and labels
+  TAB4_PERIODS.forEach(function(p,i){
+    var count=all.filter(function(e){return e.period===p.id}).length;
+    var left=(i*periodWidth+periodWidth/2)+'%';
+    var size=Math.max(8,Math.min(28,(count/maxCount)*28));
+    var isActive=tab4Period===p.id;
+    h+='<div onclick=tab4SetFilter(\"'+p.id+'\",null) style=cursor:pointer;position:absolute;top:'+(30-size/2)+'px;left:'+left+';width:'+size+'px;height:'+size+'px;background:'+(isActive?'#c0392b':'#3a7ca5')+';border-radius:50%;transform:translateX(-50%);z-index:2 title=\"'+p.label+': '+count+'条\"></div>';
+    h+='<div onclick=tab4SetFilter(\"'+p.id+'\",null) style=cursor:pointer;position:absolute;top:58px;left:'+left+';transform:translateX(-50%);font-size:.7em;color:'+(isActive?'#c0392b':'#666')+';white-space:nowrap;font-weight:'+(isActive?'700':'400')+'">'+p.label.split(' ')[0]+'<br><b>'+count+'</b></div>';
+  });
+  h+='</div>';
+  container.innerHTML=h;
+}
+
 function renderTab4Stats(){
   var all=getTab4Data();var filt=tab4Filtered();
   var cats={};all.forEach(function(e){cats[e.category]=(cats[e.category]||0)+1});
@@ -196,7 +217,7 @@ function renderTab4Sidebar(){
     toc.innerHTML+='<a onclick="tab4ShowDetail(\''+e.id+'\');document.getElementById(\'tab4-detail\').scrollIntoView()" title="'+ct+' · '+cn+'字"><small style=color:#888>'+ct+'</small> '+star+e.title.substring(0,22)+'</a>';
   });
 }
-function tab4SetFilter(p,c){tab4Period=p;tab4Cat=c;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();renderTab4Stats();}
+function tab4SetFilter(p,c){tab4Period=p;tab4Cat=c;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4TimelineViz();renderTab4List();renderTab4Stats();}
 function tab4Search(q){tab4SearchQ=q;renderTab4Sidebar();renderTab4List();renderTab4Stats();}
 
 function renderTab4List(){
