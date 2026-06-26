@@ -25,6 +25,16 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 #detail-area img{max-width:100%;margin:8px 0;border:1px solid #d5cfc0}
 .back-btn{display:inline-block;background:#c0392b;color:#fff;padding:10px 24px;border:none;border-radius:4px;cursor:pointer;font-size:1em;font-family:inherit;margin-bottom:16px}
 .back-btn:hover{background:#8b0000}
+/* Tab 4: Sidebar layout */
+#tab4-layout{display:flex;min-height:calc(100vh-120px)}
+#tab4-sidebar{width:280px;min-width:280px;background:#1a1a1a;color:#ccc;padding:16px 0;overflow-y:auto}
+#tab4-sidebar h3{padding:8px 20px;font-size:.85em;color:#999;text-transform:uppercase}
+#tab4-sidebar a{display:block;padding:6px 20px;color:#bbb;text-decoration:none;font-size:.9em;cursor:pointer}
+#tab4-sidebar a:hover{background:#2a2a2a;color:#fff}
+#tab4-sidebar a.active{background:#c0392b;color:#fff}
+#tab4-main{flex:1;padding:20px 30px;overflow-y:auto}
+#tab4-main .entry-card{border-left:4px solid #c0392b}
+@media(max-width:768px){#tab4-layout{flex-direction:column}#tab4-sidebar{width:100%;min-width:100%;max-height:200px}}
 </style>
 </head>
 <body>
@@ -33,6 +43,7 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
   <button class="top-tab active" onclick="switchTab(0)">1. 课堂笔记（考试重点）</button>
   <button class="top-tab" onclick="switchTab(1)">2. 三本书深度笔记（1264张引文截图）</button>
   <button class="top-tab" onclick="switchTab(2)">3. 长孙博题库（166页原版扫描）</button>
+  <button class="top-tab" onclick="switchTab(3)">4. 综合知识库（时间轴+分类浏览）</button>
 </div>
 
 <div class="search-box"><input type="text" id="search" placeholder="搜索..." oninput="doSearch(this.value)"></div>
@@ -40,6 +51,19 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 <div id="main-area">
   <div id="list-area"></div>
   <div id="detail-area"></div>
+</div>
+
+<div id="tab4-layout" style="display:none">
+  <div id="tab4-sidebar">
+    <h3>时间轴</h3>
+    <div id="tab4-timeline"></div>
+    <h3 style="margin-top:16px">分类浏览</h3>
+    <div id="tab4-categories"></div>
+  </div>
+  <div id="tab4-main">
+    <div id="tab4-list"></div>
+    <div id="tab4-detail" style="display:none"></div>
+  </div>
 </div>
 
 <script src="js/data_classnotes.js?v=2"></script>
@@ -124,6 +148,80 @@ function doSearch(q){
   }
   c.innerHTML=h;
 }
+
+// ===== TAB 4: Combined Knowledge Base =====
+var TAB4_PERIODS=[{id:'1949-1952',label:'1949-1952 新政权建立与巩固'},{id:'1953-1956',label:'1953-1956 社会主义改造'},{id:'1956-1957',label:'1956-1957 双百方针与反右'},{id:'1958-1961',label:'1958-1961 大跃进与大饥荒'},{id:'1961-1965',label:'1961-1965 调整与社教运动'},{id:'1966-1969',label:'1966-1969 文化大革命高潮'},{id:'1969-1976',label:'1969-1976 文革后期与终结'},{id:'1976-1982',label:'1976-1982 改革开放启动'}];
+var TAB4_CATS=[{key:'events',label:'政治事件'},{key:'terms',label:'名词解释'},{key:'documents',label:'重要文件'},{key:'meetings',label:'重要会议'},{key:'figures',label:'重要人物'},{key:'movements',label:'重要运动'}];
+var tab4Filter=null, TAB4_DATA=null;
+
+function buildTab4Data(){
+  var data=[];
+  CLASS_NOTES.forEach(function(e){
+    var imgTag='';var m=e.content.match(/<img[^>]*>/);if(m)imgTag=m[0];
+    var text=e.content.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+    var period='1949-1982',t=e.title;
+    if(t.indexOf('新政')>-1||t.indexOf('史料')>-1)period='1949-1952';
+    else if(t.indexOf('外交')>-1||t.indexOf('抗美')>-1)period='1949-1952';
+    else if(t.indexOf('新民主')>-1||t.indexOf('经济恢复')>-1)period='1949-1952';
+    else if(t.indexOf('工业化')>-1||t.indexOf('产权')>-1)period='1953-1956';
+    else if(t.indexOf('政治体制')>-1||t.indexOf('社会主义制度')>-1)period='1953-1956';
+    else if(t.indexOf('双百')>-1||t.indexOf('反右')>-1)period='1956-1957';
+    else if(t.indexOf('大跃进')>-1)period='1958-1961';
+    else if(t.indexOf('文革')>-1||t.indexOf('意识形态')>-1||t.indexOf('革命生活')>-1)period='1966-1969';
+    data.push({id:'t4_'+e.id,title:e.title,period:period,category:'events',summary:text.substring(0,250),content:e.content});
+  });
+  BOOK_ENTRIES.forEach(function(e){
+    if(e.core&&e.core.length>50){
+      var period='1949-1982',t=e.title;
+      if(t.indexOf('再统一')>-1||t.indexOf('新政')>-1)period='1949-1952';
+      else if(t.indexOf('经济')>-1||t.indexOf('五年')>-1||t.indexOf('集体化')>-1||t.indexOf('农业')>-1)period='1953-1956';
+      else if(t.indexOf('知识')>-1||t.indexOf('双百')>-1||t.indexOf('反右')>-1||t.indexOf('百花')>-1)period='1956-1957';
+      else if(t.indexOf('大跃进')>-1||t.indexOf('公社')>-1)period='1958-1961';
+      else if(t.indexOf('调整')>-1||t.indexOf('社教')>-1||t.indexOf('分裂')>-1||t.indexOf('恢复')>-1)period='1961-1965';
+      else if(t.indexOf('文革')>-1||t.indexOf('红卫兵')>-1||t.indexOf('夺权')>-1||t.indexOf('政治过程')>-1)period='1966-1969';
+      else if(t.indexOf('林彪')>-1||t.indexOf('后期')>-1||t.indexOf('毛时代')>-1||t.indexOf('终结')>-1)period='1969-1976';
+      else if(t.indexOf('邓')>-1||t.indexOf('改革')>-1||t.indexOf('市场')>-1||t.indexOf('民主')>-1)period='1976-1982';
+      data.push({id:'t4b_'+e.id,title:e.title,period:period,category:'events',summary:e.core.substring(0,250),content:e.preview||e.core,fromBook:true,imgCount:e.image_count});
+    }
+  });
+  return data;
+}
+
+function renderTab4(){
+  if(!TAB4_DATA)TAB4_DATA=buildTab4Data();
+  document.getElementById('main-area').style.display='none';
+  document.getElementById('tab4-layout').style.display='flex';
+  renderTab4Sidebar();renderTab4List();
+}
+function renderTab4Sidebar(){
+  var tl=document.getElementById('tab4-timeline');
+  tl.innerHTML=TAB4_PERIODS.map(function(p){var c=TAB4_DATA.filter(function(e){return e.period===p.id}).length;return '<a class="'+(tab4Filter===p.id?'active':'')+'" onclick="tab4FilterBy(\''+p.id+'\')">'+p.label+' ('+c+')</a>';}).join('');
+  var cl=document.getElementById('tab4-categories');
+  cl.innerHTML='<a class="'+(tab4Filter===null?'active':'')+'" onclick="tab4FilterBy(null)">全部 ('+TAB4_DATA.length+')</a>';
+  TAB4_CATS.forEach(function(c){cl.innerHTML+='<a class="'+(tab4Filter===c.key?'active':'')+'" onclick="tab4FilterBy(\''+c.key+'\')">'+c.label+'</a>';});
+}
+function tab4FilterBy(f){tab4Filter=f;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();}
+function renderTab4List(){
+  var data=TAB4_DATA;if(tab4Filter)data=data.filter(function(e){return e.period===tab4Filter||e.category===tab4Filter});
+  var c=document.getElementById('tab4-list');var h='<div class=stats>共 '+data.length+' 条</div>';
+  data.forEach(function(e){h+='<div class=entry-card onclick=tab4ShowDetail(\"'+e.id+'\")><h3>'+e.title+'</h3><div class=meta>'+e.period+(e.fromBook?' · 学术分析 · '+e.imgCount+'张截图':'')+'</div><div class=preview>'+e.summary+'</div></div>';});
+  c.innerHTML=h;
+}
+function tab4ShowDetail(id){
+  var e=TAB4_DATA.find(function(x){return x.id===id});if(!e)return;
+  document.getElementById('tab4-list').style.display='none';var d=document.getElementById('tab4-detail');d.style.display='block';
+  d.innerHTML='<button class=back-btn onclick=tab4GoBack()>← 返回列表</button><h2 style=color:#c0392b>'+e.title+'</h2><div class=meta>'+e.period+(e.fromBook?' · 学术分析':'')+'</div><div style=margin-top:16px>'+e.content+'</div>';
+  window.scrollTo(0,0);
+}
+function tab4GoBack(){document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';}
+
+// Patch switchTab for tab 4
+var _origSwitchTab=switchTab;
+switchTab=function(n){
+  document.getElementById('tab4-layout').style.display='none';document.getElementById('main-area').style.display='block';
+  if(n===3){currentTab=3;document.querySelectorAll('.top-tab').forEach(function(t,i){t.classList.toggle('active',i===n)});document.getElementById('main-area').style.display='none';renderTab4();}
+  else _origSwitchTab(n);
+};
 
 renderList();
 </script>
