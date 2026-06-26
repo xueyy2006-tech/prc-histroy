@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>诊断-图片测试</title>
+<style>body{font-family:sans-serif;padding:20px;max-width:900px;margin:0 auto}
+img{max-width:100%;border:2px solid green;margin:10px 0}
+.pass{color:green}.fail{color:red}</style></head>
+<body>
+<h1>诊断页面 - 图片加载测试</h1>
+
+<div id="test1"><h2>测试1: 直接img标签</h2><img src="screenshots/cam1_ch01_01.png"></div>
+<div id="test2"><h2>测试2: 通过JS innerHTML</h2><div id="t2"></div></div>
+<div id="test3"><h2>测试3: 从data_books.js加载内容</h2><div id="t3"></div></div>
+<div id="test4"><h2>测试4: 第一条目的前5000字符</h2><div id="t4"></div></div>
+
+<script src="js/data_books.js"></script>
+<script>
+// Test 2
+var t2 = document.getElementById('t2');
+t2.innerHTML = '<p>通过innerHTML设置:</p><img src="screenshots/cam1_ch01_01.png">';
+if (t2.querySelector('img')) {
+  t2.innerHTML += '<p class=pass>✅ innerHTML方式OK</p>';
+}
+
+// Test 3
+var t3 = document.getElementById('t3');
+if (typeof BOOK_ENTRIES !== 'undefined') {
+  t3.innerHTML += '<p class=pass>✅ BOOK_ENTRIES加载成功，共'+BOOK_ENTRIES.length+'条</p>';
+
+  var e = BOOK_ENTRIES[0];
+  t3.innerHTML += '<p>第一条目标题: '+e.title+'</p>';
+  t3.innerHTML += '<p>图片数量: '+e.image_count+'</p>';
+
+  // Try to render content
+  var content = e.full_content;
+  t3.innerHTML += '<p>full_content长度: '+content.length+' 字符</p>';
+
+  // Extract first image
+  var m = content.match(/<img[^>]+>/);
+  if (m) {
+    t3.innerHTML += '<p>第一张img标签: <code>'+m[0].replace(/</g,'&lt;')+'</code></p>';
+    t3.innerHTML += '<p>渲染结果:</p>'+m[0];
+    t3.innerHTML += '<p class=pass>✅ img标签存在于数据中</p>';
+  } else {
+    t3.innerHTML += '<p class=fail>❌ 数据中没有img标签!</p>';
+    // Show first 1000 chars
+    t3.innerHTML += '<pre>'+content.substring(0,1000).replace(/</g,'&lt;')+'</pre>';
+  }
+
+  // Check image count
+  var allImgs = content.match(/<img[^>]+>/g);
+  t3.innerHTML += '<p>full_content中共有 '+ (allImgs?allImgs.length:0) +' 张img标签</p>';
+  if (allImgs && allImgs.length > 0) {
+    t3.innerHTML += '<h3>前10张截图渲染:</h3>';
+    for (var i=0; i<Math.min(10, allImgs.length); i++) {
+      t3.innerHTML += allImgs[i];
+    }
+  }
+} else {
+  t3.innerHTML += '<p class=fail>❌ BOOK_ENTRIES未定义! data_books.js可能加载失败</p>';
+}
+
+// Test 4 - first entry preview
+var t4 = document.getElementById('t4');
+if (typeof BOOK_ENTRIES !== 'undefined') {
+  t4.innerHTML += '<pre>'+BOOK_ENTRIES[0].full_content.substring(0,5000).replace(/</g,'&lt;')+'</pre>';
+}
+</script>
+</body>
+</html>
