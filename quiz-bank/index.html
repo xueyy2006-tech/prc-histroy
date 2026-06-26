@@ -27,8 +27,8 @@ h1{text-align:center;padding:24px;color:#c0392b;font-size:1.5em}
 <body>
 <h1>长孙博 · 中国近现代史题库</h1>
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('mingci')">名词解释 (63页)</button>
-  <button class="tab" onclick="switchTab('lunshu')">论述题 (103页)</button>
+  <button class="tab active" id="tab-mingci" onclick="switchTab('mingci')">名词解释 (63页)</button>
+  <button class="tab" id="tab-lunshu" onclick="switchTab('lunshu')">论述题 (103页)</button>
 </div>
 <div class="pages" id="page-nav"></div>
 <div class="nav">
@@ -49,8 +49,9 @@ const maxPages = {mingci:63, lunshu:103};
 function switchTab(tab) {
   currentTab = tab;
   currentPage = 1;
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelector(`.tab:nth-child(${tab==='mingci'?1:2})`).classList.add('active');
+  document.getElementById('tab-mingci').classList.remove('active');
+  document.getElementById('tab-lunshu').classList.remove('active');
+  document.getElementById('tab-' + tab).classList.add('active');
   renderPageNav();
   showPage(1);
 }
