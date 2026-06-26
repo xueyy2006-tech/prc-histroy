@@ -55,12 +55,14 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 
 <div id="tab4-layout" style="display:none">
   <div id="tab4-sidebar">
-    <h3>时间轴</h3>
-    <div id="tab4-timeline"></div>
-    <h3 style="margin-top:16px">分类浏览</h3>
-    <div id="tab4-categories"></div>
+    <div style="padding:8px 16px;background:#c0392b;color:#fff;font-weight:700;margin-bottom:8px">综合知识库</div>
+    <div style="padding:4px 16px"><input id="tab4-search" placeholder="搜索..." style="width:100%;padding:6px 10px;border:1px solid #444;background:#2a2a2a;color:#eee;border-radius:4px;font-size:.9em" oninput="tab4Search(this.value)"></div>
+    <h3>📅 时期</h3><div id="tab4-timeline"></div>
+    <h3 style="margin-top:12px">📂 分类</h3><div id="tab4-categories"></div>
+    <h3 style="margin-top:12px">📑 快捷目录</h3><div id="tab4-toc" style="max-height:300px;overflow-y:auto"></div>
   </div>
   <div id="tab4-main">
+    <div id="tab4-stats" style="margin-bottom:12px"></div>
     <div id="tab4-list"></div>
     <div id="tab4-detail" style="display:none"></div>
   </div>
@@ -150,86 +152,80 @@ function doSearch(q){
   c.innerHTML=h;
 }
 
-// ===== TAB 4: Combined Knowledge Base =====
-var TAB4_PERIODS=[{id:'1949-1952',label:'1949-1952 新政权建立与巩固'},{id:'1953-1956',label:'1953-1956 社会主义改造'},{id:'1956-1957',label:'1956-1957 双百方针与反右'},{id:'1958-1961',label:'1958-1961 大跃进与大饥荒'},{id:'1961-1965',label:'1961-1965 调整与社教运动'},{id:'1966-1969',label:'1966-1969 文化大革命高潮'},{id:'1969-1976',label:'1969-1976 文革后期与终结'},{id:'1976-1982',label:'1976-1982 改革开放启动'}];
-var TAB4_CATS=[{key:'events',label:'政治事件'},{key:'terms',label:'名词解释'},{key:'documents',label:'重要文件'},{key:'meetings',label:'重要会议'},{key:'figures',label:'重要人物'},{key:'movements',label:'重要运动'}];
-var tab4Filter=null, TAB4_DATA=null;
+// ===== TAB 4: Enhanced Knowledge Base =====
+var TAB4_PERIODS=[{id:'1949-1952',label:'1949-1952 新政权建立与巩固'},{id:'1953-1956',label:'1953-1956 社会主义改造'},{id:'1956-1957',label:'1956-1957 双百与反右'},{id:'1958-1961',label:'1958-1961 大跃进与大饥荒'},{id:'1961-1965',label:'1961-1965 调整与社教'},{id:'1966-1969',label:'1966-1969 文革高潮'},{id:'1969-1976',label:'1969-1976 文革后期与终结'},{id:'1976-1982',label:'1976-1982 改革开放启动'}];
+var TAB4_CATS=[{key:'events',label:'政治事件',icon:'📜'},{key:'terms',label:'名词解释',icon:'📖'},{key:'documents',label:'重要文件',icon:'📄'},{key:'meetings',label:'重要会议',icon:'🏛'},{key:'figures',label:'重要人物',icon:'👤'},{key:'movements',label:'重要运动',icon:'🔥'}];
+var tab4Period=null, tab4Cat=null, tab4SearchQ='';
 
-function buildTab4Data(){
-  var data=[];
-  CLASS_NOTES.forEach(function(e){
-    var imgTag='';var m=e.content.match(/<img[^>]*>/);if(m)imgTag=m[0];
-    var text=e.content.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
-    var period='1949-1982',t=e.title;
-    if(t.indexOf('新政')>-1||t.indexOf('史料')>-1)period='1949-1952';
-    else if(t.indexOf('外交')>-1||t.indexOf('抗美')>-1)period='1949-1952';
-    else if(t.indexOf('新民主')>-1||t.indexOf('经济恢复')>-1)period='1949-1952';
-    else if(t.indexOf('工业化')>-1||t.indexOf('产权')>-1)period='1953-1956';
-    else if(t.indexOf('政治体制')>-1||t.indexOf('社会主义制度')>-1)period='1953-1956';
-    else if(t.indexOf('双百')>-1||t.indexOf('反右')>-1)period='1956-1957';
-    else if(t.indexOf('大跃进')>-1)period='1958-1961';
-    else if(t.indexOf('文革')>-1||t.indexOf('意识形态')>-1||t.indexOf('革命生活')>-1)period='1966-1969';
-    data.push({id:'t4_'+e.id,title:e.title,period:period,category:'events',summary:text.substring(0,250),content:e.content});
-  });
-  BOOK_ENTRIES.forEach(function(e){
-    if(e.core&&e.core.length>50){
-      var period='1949-1982',t=e.title;
-      if(t.indexOf('再统一')>-1||t.indexOf('新政')>-1)period='1949-1952';
-      else if(t.indexOf('经济')>-1||t.indexOf('五年')>-1||t.indexOf('集体化')>-1||t.indexOf('农业')>-1)period='1953-1956';
-      else if(t.indexOf('知识')>-1||t.indexOf('双百')>-1||t.indexOf('反右')>-1||t.indexOf('百花')>-1)period='1956-1957';
-      else if(t.indexOf('大跃进')>-1||t.indexOf('公社')>-1)period='1958-1961';
-      else if(t.indexOf('调整')>-1||t.indexOf('社教')>-1||t.indexOf('分裂')>-1||t.indexOf('恢复')>-1)period='1961-1965';
-      else if(t.indexOf('文革')>-1||t.indexOf('红卫兵')>-1||t.indexOf('夺权')>-1||t.indexOf('政治过程')>-1)period='1966-1969';
-      else if(t.indexOf('林彪')>-1||t.indexOf('后期')>-1||t.indexOf('毛时代')>-1||t.indexOf('终结')>-1)period='1969-1976';
-      else if(t.indexOf('邓')>-1||t.indexOf('改革')>-1||t.indexOf('市场')>-1||t.indexOf('民主')>-1)period='1976-1982';
-      data.push({id:'t4b_'+e.id,title:e.title,period:period,category:'events',summary:e.core.substring(0,250),content:e.preview||e.core,fromBook:true,imgCount:e.image_count});
-    }
-  });
-  return data;
-}
+function getTab4Data(){return (typeof ALL_CARDS!=='undefined'&&ALL_CARDS.length>0)?ALL_CARDS:[];}
+function tab4Filtered(){var d=getTab4Data();if(tab4Period)d=d.filter(function(e){return e.period===tab4Period});if(tab4Cat)d=d.filter(function(e){return e.category===tab4Cat});if(tab4SearchQ){var q=tab4SearchQ.toLowerCase();d=d.filter(function(e){return(e.title||'').toLowerCase().indexOf(q)>-1||(e.summary||'').toLowerCase().indexOf(q)>-1});}return d;}
 
 function renderTab4(){
-  if(!TAB4_DATA)TAB4_DATA=buildTab4Data();
-  document.getElementById('main-area').style.display='none';
-  document.getElementById('tab4-layout').style.display='flex';
-  renderTab4Sidebar();renderTab4List();
+  document.getElementById('main-area').style.display='none';document.getElementById('tab4-layout').style.display='flex';
+  renderTab4Sidebar();renderTab4List();renderTab4Stats();
+}
+function renderTab4Stats(){
+  var all=getTab4Data();var filt=tab4Filtered();
+  var cats={};all.forEach(function(e){cats[e.category]=(cats[e.category]||0)+1});
+  var h='<b>共 '+filt.length+'/'+all.length+' 条</b> | ';
+  TAB4_CATS.forEach(function(c){h+=c.icon+' '+(cats[c.key]||0)+' ';});
+  document.getElementById('tab4-stats').innerHTML=h;
 }
 function renderTab4Sidebar(){
-  var tl=document.getElementById('tab4-timeline');
-  tl.innerHTML=TAB4_PERIODS.map(function(p){var c=TAB4_DATA.filter(function(e){return e.period===p.id}).length;return '<a class="'+(tab4Filter===p.id?'active':'')+'" onclick="tab4FilterBy(\''+p.id+'\')">'+p.label+' ('+c+')</a>';}).join('');
-  var cl=document.getElementById('tab4-categories');
-  cl.innerHTML='<a class="'+(tab4Filter===null?'active':'')+'" onclick="tab4FilterBy(null)">全部 ('+TAB4_DATA.length+')</a>';
-  TAB4_CATS.forEach(function(c){cl.innerHTML+='<a class="'+(tab4Filter===c.key?'active':'')+'" onclick="tab4FilterBy(\''+c.key+'\')">'+c.label+'</a>';});
-}
-function tab4FilterBy(f){tab4Filter=f;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();}
-function renderTab4List(){
-  var data=(typeof ALL_CARDS!=='undefined'&&ALL_CARDS.length>0)?ALL_CARDS:TAB4_DATA;
-  if(tab4Filter)data=data.filter(function(e){return e.period===tab4Filter||e.category===tab4Filter});
-  var c=document.getElementById('tab4-list');var h='<div class=stats>共 '+data.length+' 条</div>';
-  data.forEach(function(e){
-    var catLabel={'meetings':'会议','documents':'文件','movements':'运动','events':'事件','terms':'名词','figures':'人物'}[e.category]||e.category;
-    var summary=e.summary||(e.core||'');var period=e.period||'1949-1982';
-    h+='<div class=entry-card onclick=tab4ShowDetail(\"'+e.id+'\")><h3>'+e.title+'</h3><div class=meta>'+catLabel+' · '+period+'</div><div class=preview>'+summary.substring(0,200)+'...</div></div>';
+  var all=getTab4Data();
+  // Timeline with counts
+  var tl=document.getElementById('tab4-timeline');tl.innerHTML='';
+  TAB4_PERIODS.forEach(function(p){
+    var c=all.filter(function(e){return e.period===p.id}).length;
+    if(c>0)tl.innerHTML+='<a class="'+(tab4Period===p.id?'active':'')+'" onclick="tab4SetFilter(\''+p.id+'\',null)">'+p.label+' ('+c+')</a>';
   });
+  tl.innerHTML+='<a class="'+(tab4Period===null&&tab4Cat===null?'active':'')+'" onclick="tab4SetFilter(null,null)">📋 全部显示</a>';
+  // Categories
+  var cl=document.getElementById('tab4-categories');cl.innerHTML='';
+  TAB4_CATS.forEach(function(c){
+    var n=all.filter(function(e){return e.category===c.key}).length;
+    if(n>0)cl.innerHTML+='<a class="'+(tab4Cat===c.key?'active':'')+'" onclick="tab4SetFilter(null,\''+c.key+'\')">'+c.icon+' '+c.label+' ('+n+')</a>';
+  });
+  // TOC - quick jump
+  var toc=document.getElementById('tab4-toc');toc.innerHTML='';
+  var filt=tab4Filtered();
+  filt.slice(0,100).forEach(function(e){
+    var cn=(e.summary||'').length;var star=cn>300?'★':cn>100?'·':' ';
+    toc.innerHTML+='<a onclick="tab4ShowDetail(\''+e.id+'\');document.getElementById(\'tab4-detail\').scrollIntoView()" title="'+cn+'字">'+star+' '+e.title.substring(0,25)+'</a>';
+  });
+}
+function tab4SetFilter(p,c){tab4Period=p;tab4Cat=c;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();renderTab4Stats();}
+function tab4Search(q){tab4SearchQ=q;renderTab4Sidebar();renderTab4List();renderTab4Stats();}
+
+function renderTab4List(){
+  var data=tab4Filtered();var c=document.getElementById('tab4-list');
+  var catLabel={events:'政治事件',documents:'重要文件',meetings:'重要会议',figures:'重要人物',terms:'名词解释',movements:'重要运动'};
+  var h='';
+  data.forEach(function(e){
+    var cat=catLabel[e.category]||e.category;var p=e.period||'1949-1982';var s=(e.summary||'');var cn=s.length;
+    var quality=cn>500?'🟢':cn>200?'🟡':cn>50?'🟠':'🔴';
+    h+='<div class=entry-card onclick=tab4ShowDetail(\"'+e.id+'\")><h3>'+e.title+' <small style=color:#999>'+quality+'</small></h3><div class=meta><span style=background:#3a7ca5;color:#fff;padding:1px 6px;border-radius:3px;margin-right:6px>'+cat+'</span> '+p+' · '+cn+'字</div><div class=preview>'+s.substring(0,200)+'...</div></div>';
+  });
+  if(data.length===0)h='<div class=stats>没有匹配的卡片，请调整筛选条件</div>';
   c.innerHTML=h;
 }
+
 function tab4ShowDetail(id){
-  var data=(typeof ALL_CARDS!=='undefined'&&ALL_CARDS.length>0)?ALL_CARDS:TAB4_DATA;
-  var e=data.find(function(x){return x.id===id});if(!e)return;
+  var e=getTab4Data().find(function(x){return x.id===id});if(!e)return;
   document.getElementById('tab4-list').style.display='none';var d=document.getElementById('tab4-detail');d.style.display='block';
-  var html='<button class=back-btn onclick=tab4GoBack()>返回列表</button><h2 style=color:#c0392b>'+e.title+'</h2>';
-  if(e.period)html+='<div class=meta>'+e.period+'</div>';
-  html+='<div style=margin-top:16px>';
-  if(e.summary)html+='<h3>概述</h3><p>'+e.summary+'</p>';
-  if(e.background&&e.background.length>0){html+='<h3>背景与前因</h3>';e.background.forEach(function(p){html+='<p>'+p+'</p>'});}
-  if(e.process&&e.process.length>0){html+='<h3>过程与内容</h3>';e.process.forEach(function(p){html+='<p>'+p+'</p>'});}
-  if(e.result)html+='<h3>结果</h3><p>'+e.result+'</p>';
-  if(e.impact)html+='<h3>影响与意义</h3><p>'+e.impact+'</p>';
-  html+='</div>';
-  d.innerHTML=html;
-  window.scrollTo(0,0);
+  var catLabel={events:'政治事件',documents:'重要文件',meetings:'重要会议',figures:'重要人物',terms:'名词解释',movements:'重要运动'};
+  var h='<button class=back-btn onclick=tab4GoBack()>← 返回列表</button><h2 style=color:#c0392b>'+e.title+'</h2>';
+  h+='<div class=meta>'+ (catLabel[e.category]||e.category) +' · '+ (e.period||'') +' · '+(e.summary||'').length+'字</div>';
+  h+='<div style=margin-top:16px>';
+  if(e.summary)h+='<h3>概述</h3><p>'+e.summary+'</p>';
+  if(e.background&&e.background.length>0&&e.background[0]){h+='<h3>背景与前因</h3>';e.background.forEach(function(p){if(p)h+='<p>'+p+'</p>'});}
+  if(e.process&&e.process.length>0&&e.process[0]){h+='<h3>过程与内容</h3>';e.process.forEach(function(p){if(p)h+='<p>'+p+'</p>'});}
+  if(e.result&&e.result.length>5)h+='<h3>结果</h3><p>'+e.result+'</p>';
+  if(e.impact&&e.impact.length>5)h+='<h3>影响与意义</h3><p>'+e.impact+'</p>';
+  h+='</div>';
+  d.innerHTML=h;window.scrollTo(0,0);
 }
-function tab4GoBack(){document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';}
+function tab4GoBack(){document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';window.scrollTo(0,0);}
 
 // Patch switchTab for tab 4
 var _origSwitchTab=switchTab;
