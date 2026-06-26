@@ -17,11 +17,9 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 .entry-card h3{font-size:1.1em;color:#2c2416;margin-bottom:6px}
 .entry-card .meta{font-size:.8em;color:#a0522d;margin-bottom:6px}
 .entry-card .preview{font-size:.9em;color:#666;line-height:1.6}
-#detail-panel{position:fixed;top:80px;right:0;width:60%;height:calc(100vh-80px);background:#fdfbf5;border-left:2px solid #c0392b;overflow-y:scroll;-webkit-overflow-scrolling:touch;padding:24px 32px 100px;display:none;box-shadow:-4px 0 16px rgba(0,0,0,.1);z-index:99}
+#detail-panel{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fdfbf5;overflow-y:scroll;-webkit-overflow-scrolling:touch;padding:16px 24px 80px;display:none;z-index:9999}
 #detail-panel img{max-width:100%;margin:8px 0;border:1px solid #d5cfc0}
-#detail-overlay{position:fixed;top:0;left:0;width:40%;height:100vh;z-index:98;display:none}
-#close-detail{position:sticky;top:8px;float:right;background:#c0392b;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:1em;z-index:101}
-@media(max-width:768px){#detail-panel{width:100%}#detail-overlay{display:none!important}}
+#close-detail{position:sticky;top:8px;float:right;background:#c0392b;color:#fff;border:none;padding:10px 24px;border-radius:4px;cursor:pointer;font-size:1.1em;z-index:10000}
 .search-box{padding:8px 16px;text-align:center}
 .search-box input{width:400px;max-width:90%;padding:10px;border:1px solid #d5cfc0;border-radius:4px;font-size:1em;font-family:inherit}
 .section-header{background:#c0392b;color:#fff;padding:8px 16px;margin:16px 0 8px;border-radius:4px;font-weight:700}
@@ -44,8 +42,10 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 <div id="tab-content"></div>
 
 <div id="detail-panel">
-  <button id="close-detail" onclick="closeDetail()">X 关闭</button>
+  <div style="max-width:900px;margin:0 auto">
+  <button id="close-detail" onclick="closeDetail()">✕ 关闭</button>
   <div id="detail-content"></div>
+  </div>
 </div>
 
 <script src="js/data_classnotes.js"></script>
