@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国当代史（1949-1982）| ECNU复习资料</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h1>中国当代史</h1>
+    <p class="subtitle">1949-1982</p>
+  </div>
+  <div id="search-box">
+    <input type="text" id="search-input" placeholder="搜索事件、文件、人物、名词...">
+  </div>
+  <div id="timeline-nav">
+    <h3>📅 时间轴</h3>
+    <div id="timeline-links"></div>
+  </div>
+  <div id="category-nav">
+    <h3>📂 分类浏览</h3>
+    <div id="category-links"></div>
+  </div>
+</nav>
+<main id="content">
+  <div id="home-view">
+    <div class="hero">
+      <h2>中华人民共和国史</h2>
+      <p>从建国到改革开放初期（1949-1982）的政治事件、重要文件、会议、人物、名词解释与运动详解</p>
+      <p class="source-note">内容来源：剑桥中华人民共和国史（上、下卷）+ 毛泽东的中国及其后（迈斯纳）+ ECNU课程讲义</p>
+    </div>
+    <div class="stats-bar">
+      <div class="stat" id="stat-events"><span class="num">0</span>政治事件</div>
+      <div class="stat" id="stat-documents"><span class="num">0</span>重要文件</div>
+      <div class="stat" id="stat-meetings"><span class="num">0</span>重要会议</div>
+      <div class="stat" id="stat-figures"><span class="num">0</span>重要人物</div>
+      <div class="stat" id="stat-terms"><span class="num">0</span>名词解释</div>
+      <div class="stat" id="stat-movements"><span class="num">0</span>重要运动</div>
+    </div>
+    <div id="period-cards"></div>
+    <div id="featured-entries"></div>
+  </div>
+  <div id="detail-view" style="display:none">
+    <button id="back-btn">← 返回</button>
+    <div id="detail-content"></div>
+  </div>
+  <div id="list-view" style="display:none">
+    <button id="list-back-btn">← 返回首页</button>
+    <h2 id="list-title"></h2>
+    <div id="list-content"></div>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
