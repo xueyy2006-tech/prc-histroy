@@ -68,6 +68,7 @@ body{font-family:'Noto Serif SC','STSong','SimSun',serif;background:#f5f0e8;colo
 
 <script src="js/data_classnotes.js?v=2"></script>
 <script src="js/data_books.js?v=2"></script>
+<script src="js/data_cards.js?v=2"></script>
 
 <script>
 var currentTab=0, currentView='list';
@@ -202,15 +203,30 @@ function renderTab4Sidebar(){
 }
 function tab4FilterBy(f){tab4Filter=f;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();}
 function renderTab4List(){
-  var data=TAB4_DATA;if(tab4Filter)data=data.filter(function(e){return e.period===tab4Filter||e.category===tab4Filter});
+  var data=(typeof ALL_CARDS!=='undefined'&&ALL_CARDS.length>0)?ALL_CARDS:TAB4_DATA;
+  if(tab4Filter)data=data.filter(function(e){return e.period===tab4Filter||e.category===tab4Filter});
   var c=document.getElementById('tab4-list');var h='<div class=stats>共 '+data.length+' 条</div>';
-  data.forEach(function(e){h+='<div class=entry-card onclick=tab4ShowDetail(\"'+e.id+'\")><h3>'+e.title+'</h3><div class=meta>'+e.period+(e.fromBook?' · 学术分析 · '+e.imgCount+'张截图':'')+'</div><div class=preview>'+e.summary+'</div></div>';});
+  data.forEach(function(e){
+    var catLabel={'meetings':'会议','documents':'文件','movements':'运动','events':'事件','terms':'名词','figures':'人物'}[e.category]||e.category;
+    var summary=e.summary||(e.core||'');var period=e.period||'1949-1982';
+    h+='<div class=entry-card onclick=tab4ShowDetail(\"'+e.id+'\")><h3>'+e.title+'</h3><div class=meta>'+catLabel+' · '+period+'</div><div class=preview>'+summary.substring(0,200)+'...</div></div>';
+  });
   c.innerHTML=h;
 }
 function tab4ShowDetail(id){
-  var e=TAB4_DATA.find(function(x){return x.id===id});if(!e)return;
+  var data=(typeof ALL_CARDS!=='undefined'&&ALL_CARDS.length>0)?ALL_CARDS:TAB4_DATA;
+  var e=data.find(function(x){return x.id===id});if(!e)return;
   document.getElementById('tab4-list').style.display='none';var d=document.getElementById('tab4-detail');d.style.display='block';
-  d.innerHTML='<button class=back-btn onclick=tab4GoBack()>← 返回列表</button><h2 style=color:#c0392b>'+e.title+'</h2><div class=meta>'+e.period+(e.fromBook?' · 学术分析':'')+'</div><div style=margin-top:16px>'+e.content+'</div>';
+  var html='<button class=back-btn onclick=tab4GoBack()>返回列表</button><h2 style=color:#c0392b>'+e.title+'</h2>';
+  if(e.period)html+='<div class=meta>'+e.period+'</div>';
+  html+='<div style=margin-top:16px>';
+  if(e.summary)html+='<h3>概述</h3><p>'+e.summary+'</p>';
+  if(e.background&&e.background.length>0){html+='<h3>背景与前因</h3>';e.background.forEach(function(p){html+='<p>'+p+'</p>'});}
+  if(e.process&&e.process.length>0){html+='<h3>过程与内容</h3>';e.process.forEach(function(p){html+='<p>'+p+'</p>'});}
+  if(e.result)html+='<h3>结果</h3><p>'+e.result+'</p>';
+  if(e.impact)html+='<h3>影响与意义</h3><p>'+e.impact+'</p>';
+  html+='</div>';
+  d.innerHTML=html;
   window.scrollTo(0,0);
 }
 function tab4GoBack(){document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';}
