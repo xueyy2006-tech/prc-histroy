@@ -172,26 +172,28 @@ function renderTab4Stats(){
   document.getElementById('tab4-stats').innerHTML=h;
 }
 function renderTab4Sidebar(){
-  var all=getTab4Data();
-  // Timeline with counts
+  var all=getTab4Data();var catLabel={events:'事件',documents:'文件',meetings:'会议',figures:'人物',terms:'名词',movements:'运动'};
+  // Timeline with category breakdown
   var tl=document.getElementById('tab4-timeline');tl.innerHTML='';
   TAB4_PERIODS.forEach(function(p){
-    var c=all.filter(function(e){return e.period===p.id}).length;
-    if(c>0)tl.innerHTML+='<a class="'+(tab4Period===p.id?'active':'')+'" onclick="tab4SetFilter(\''+p.id+'\',null)">'+p.label+' ('+c+')</a>';
+    var periodCards=all.filter(function(e){return e.period===p.id});
+    var c=periodCards.length;if(c===0)return;
+    var cats='';TAB4_CATS.forEach(function(ct){var n=periodCards.filter(function(e){return e.category===ct.key}).length;if(n>0)cats+='<small style=color:#888>'+ct.icon+n+' </small>';});
+    tl.innerHTML+='<a class="'+(tab4Period===p.id?'active':'')+'" onclick="tab4SetFilter(\''+p.id+'\',null)" style=line-height:1.6>'+p.label+' <b>('+c+')</b><br>'+cats+'</a>';
   });
-  tl.innerHTML+='<a class="'+(tab4Period===null&&tab4Cat===null?'active':'')+'" onclick="tab4SetFilter(null,null)">📋 全部显示</a>';
-  // Categories
+  tl.innerHTML+='<a class="'+(tab4Period===null&&tab4Cat===null?'active':'')+'" onclick="tab4SetFilter(null,null)">📋 全部显示 ('+all.length+')</a>';
+  // Categories with period breakdown
   var cl=document.getElementById('tab4-categories');cl.innerHTML='';
-  TAB4_CATS.forEach(function(c){
-    var n=all.filter(function(e){return e.category===c.key}).length;
-    if(n>0)cl.innerHTML+='<a class="'+(tab4Cat===c.key?'active':'')+'" onclick="tab4SetFilter(null,\''+c.key+'\')">'+c.icon+' '+c.label+' ('+n+')</a>';
+  TAB4_CATS.forEach(function(ct){
+    var catCards=all.filter(function(e){return e.category===ct.key});var n=catCards.length;if(n===0)return;
+    var periods='';TAB4_PERIODS.forEach(function(p){var pn=catCards.filter(function(e){return e.period===p.id}).length;if(pn>0)periods+='<small style=color:#888>'+pn+' </small>';});
+    cl.innerHTML+='<a class="'+(tab4Cat===ct.key?'active':'')+'" onclick="tab4SetFilter(null,\''+ct.key+'\')" style=line-height:1.6>'+ct.icon+' '+ct.label+' <b>('+n+')</b><br>'+periods+'</a>';
   });
-  // TOC - quick jump
+  // TOC with categories
   var toc=document.getElementById('tab4-toc');toc.innerHTML='';
-  var filt=tab4Filtered();
-  filt.slice(0,100).forEach(function(e){
-    var cn=(e.summary||'').length;var star=cn>300?'★':cn>100?'·':' ';
-    toc.innerHTML+='<a onclick="tab4ShowDetail(\''+e.id+'\');document.getElementById(\'tab4-detail\').scrollIntoView()" title="'+cn+'字">'+star+' '+e.title.substring(0,25)+'</a>';
+  var filt=tab4Filtered();filt.slice(0,120).forEach(function(e){
+    var cn=(e.summary||'').length;var star=cn>300?'★':cn>100?'·':'';var ct=catLabel[e.category]||'';
+    toc.innerHTML+='<a onclick="tab4ShowDetail(\''+e.id+'\');document.getElementById(\'tab4-detail\').scrollIntoView()" title="'+ct+' · '+cn+'字"><small style=color:#888>'+ct+'</small> '+star+e.title.substring(0,22)+'</a>';
   });
 }
 function tab4SetFilter(p,c){tab4Period=p;tab4Cat=c;document.getElementById('tab4-detail').style.display='none';document.getElementById('tab4-list').style.display='block';renderTab4Sidebar();renderTab4List();renderTab4Stats();}
