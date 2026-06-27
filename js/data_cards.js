@@ -792,7 +792,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t003",
-    "category": "terms",
+    "category": "documents",
     "title": "中共七大",
     "date": "-",
     "period": "1949-1952",
@@ -807,7 +807,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t004",
-    "category": "terms",
+    "category": "documents",
     "title": "重庆谈判",
     "date": "-",
     "period": "1949-1952",
@@ -822,7 +822,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t005",
-    "category": "terms",
+    "category": "documents",
     "title": "军事三人小组",
     "date": "-",
     "period": "1949-1952",
@@ -837,7 +837,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t006",
-    "category": "terms",
+    "category": "meetings",
     "title": "人民专政的提出",
     "date": "-",
     "period": "1949-1952",
@@ -852,7 +852,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t007",
-    "category": "terms",
+    "category": "events",
     "title": "新中国成立的伟大意义",
     "date": "-",
     "period": "1949-1952",
@@ -867,7 +867,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t008",
-    "category": "terms",
+    "category": "documents",
     "title": "《中国共产党土地问题党纲草案》",
     "date": "-",
     "period": "1949-1952",
@@ -882,7 +882,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t009",
-    "category": "terms",
+    "category": "meetings",
     "title": "洛川政治局会议",
     "date": "-",
     "period": "1949-1952",
@@ -897,7 +897,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t010",
-    "category": "terms",
+    "category": "movements",
     "title": "中国在新区推展土改的原因",
     "date": "-",
     "period": "1949-1952",
@@ -912,7 +912,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t011",
-    "category": "terms",
+    "category": "meetings",
     "title": "新区土改的对策",
     "date": "-",
     "period": "1949-1952",
@@ -927,7 +927,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t012",
-    "category": "terms",
+    "category": "figures",
     "title": "解放上海",
     "date": "-",
     "period": "1949-1952",
@@ -942,7 +942,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t013",
-    "category": "terms",
+    "category": "movements",
     "title": "镇反运动阶段",
     "date": "-",
     "period": "1949-1952",
@@ -957,7 +957,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t014",
-    "category": "terms",
+    "category": "documents",
     "title": "镇反运动的评价",
     "date": "-",
     "period": "1949-1952",
@@ -972,7 +972,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t015",
-    "category": "terms",
+    "category": "movements",
     "title": "三反运动的阶段",
     "date": "-",
     "period": "1949-1952",
@@ -987,7 +987,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t016",
-    "category": "terms",
+    "category": "meetings",
     "title": "毛的最初设计",
     "date": "-",
     "period": "1949-1952",
@@ -1002,7 +1002,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t017",
-    "category": "terms",
+    "category": "figures",
     "title": "三反运动的结束",
     "date": "-",
     "period": "1949-1952",
@@ -1017,7 +1017,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t018",
-    "category": "terms",
+    "category": "documents",
     "title": "新外交三项原则",
     "date": "-",
     "period": "1949-1952",
@@ -1032,7 +1032,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t019",
-    "category": "terms",
+    "category": "documents",
     "title": "中共的挑战",
     "date": "-",
     "period": "1949-1952",
@@ -1047,7 +1047,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t020",
-    "category": "terms",
+    "category": "documents",
     "title": "《论人民民主专政》",
     "date": "-",
     "period": "1949-1952",
@@ -1062,7 +1062,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t021",
-    "category": "terms",
+    "category": "documents",
     "title": "《中苏友好同盟互助条约》",
     "date": "-",
     "period": "1949-1952",
@@ -1092,7 +1092,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t023",
-    "category": "terms",
+    "category": "events",
     "title": "中苏朝的交涉",
     "date": "-",
     "period": "1949-1952",
@@ -1107,7 +1107,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t024",
-    "category": "terms",
+    "category": "events",
     "title": "朝鲜战争的过程",
     "date": "-",
     "period": "1953-1956",
@@ -1122,7 +1122,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t025",
-    "category": "terms",
+    "category": "documents",
     "title": "朝鲜战争的转向",
     "date": "-",
     "period": "1953-1956",
@@ -1137,7 +1137,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t026",
-    "category": "terms",
+    "category": "documents",
     "title": "第三章 新民主主义政策与国民经济的恢复",
     "date": "-",
     "period": "1949-1952",
@@ -1167,7 +1167,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t028",
-    "category": "terms",
+    "category": "meetings",
     "title": "七届三中全会",
     "date": "-",
     "period": "1949-1952",
@@ -1182,7 +1182,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t029",
-    "category": "terms",
+    "category": "movements",
     "title": "增产节约",
     "date": "-",
     "period": "1949-1952",
@@ -1197,7 +1197,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t030",
-    "category": "terms",
+    "category": "movements",
     "title": "第五章 工业化的起步和产权制度变革",
     "date": "-",
     "period": "1949-1952",
@@ -1212,7 +1212,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t031",
-    "category": "terms",
+    "category": "documents",
     "title": "统购统销",
     "date": "-",
     "period": "1953-1956",
@@ -1242,7 +1242,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t033",
-    "category": "terms",
+    "category": "events",
     "title": "统购统销开始终结",
     "date": "-",
     "period": "1949-1952",
@@ -1272,7 +1272,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t035",
-    "category": "terms",
+    "category": "movements",
     "title": "四反运动",
     "date": "-",
     "period": "1949-1952",
@@ -1302,7 +1302,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t037",
-    "category": "terms",
+    "category": "movements",
     "title": "对放弃新民主主义的热论",
     "date": "-",
     "period": "1953-1956",
@@ -1317,7 +1317,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t038",
-    "category": "terms",
+    "category": "events",
     "title": "第六章 国家政治体制的调整与社会主义制度的确立",
     "date": "-",
     "period": "1953-1956",
@@ -1362,7 +1362,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t041",
-    "category": "terms",
+    "category": "meetings",
     "title": "孙中山的三步走",
     "date": "-",
     "period": "1949-1952",
@@ -1377,7 +1377,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t042",
-    "category": "terms",
+    "category": "movements",
     "title": "第七章 十字路口的选择",
     "date": "-",
     "period": "1953-1956",
@@ -1407,7 +1407,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t044",
-    "category": "terms",
+    "category": "figures",
     "title": "整风转向反右派的原因",
     "date": "-",
     "period": "1949-1952",
@@ -1422,7 +1422,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t045",
-    "category": "terms",
+    "category": "movements",
     "title": "毛的中心思想变化",
     "date": "-",
     "period": "1953-1956",
@@ -1437,7 +1437,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t046",
-    "category": "terms",
+    "category": "figures",
     "title": "第八章 国家工业化的加速和大跃进运动",
     "date": "-",
     "period": "1958-1961",
@@ -1452,7 +1452,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t047",
-    "category": "terms",
+    "category": "meetings",
     "title": "杭州会议",
     "date": "-",
     "period": "1956-1957",
@@ -1482,7 +1482,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t049",
-    "category": "terms",
+    "category": "movements",
     "title": "人民公社",
     "date": "-",
     "period": "1958-1961",
@@ -1527,7 +1527,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t052",
-    "category": "terms",
+    "category": "movements",
     "title": "要搞大跃进的背景",
     "date": "-",
     "period": "1953-1956",
@@ -1542,7 +1542,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t053",
-    "category": "terms",
+    "category": "events",
     "title": "经济危机出现的原因",
     "date": "-",
     "period": "1956-1957",
@@ -1557,7 +1557,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t054",
-    "category": "terms",
+    "category": "meetings",
     "title": "中共八届九中全会",
     "date": "-",
     "period": "1949-1952",
@@ -1572,7 +1572,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t055",
-    "category": "terms",
+    "category": "meetings",
     "title": "西楼会议",
     "date": "-",
     "period": "1961-1965",
@@ -1587,7 +1587,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t056",
-    "category": "terms",
+    "category": "events",
     "title": "干部政策-甄别右倾机会主义分子",
     "date": "-",
     "period": "1958-1961",
@@ -1602,7 +1602,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t057",
-    "category": "terms",
+    "category": "meetings",
     "title": "中共八届十中全会",
     "date": "-",
     "period": "1953-1956",
@@ -1617,7 +1617,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t058",
-    "category": "terms",
+    "category": "events",
     "title": "中苏交恶的影响",
     "date": "-",
     "period": "1949-1952",
@@ -1632,7 +1632,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t059",
-    "category": "terms",
+    "category": "documents",
     "title": "保定小四清经验",
     "date": "-",
     "period": "1949-1952",
@@ -1647,7 +1647,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t060",
-    "category": "terms",
+    "category": "figures",
     "title": "“四清”运动中的极端现象",
     "date": "-",
     "period": "1961-1965",
@@ -1662,7 +1662,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t061",
-    "category": "terms",
+    "category": "documents",
     "title": "第十二章 意识形态领域的批判的革命生活日常化",
     "date": "-",
     "period": "1953-1956",
@@ -1677,7 +1677,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t062",
-    "category": "terms",
+    "category": "movements",
     "title": "批示的影响",
     "date": "-",
     "period": "1949-1952",
@@ -1707,7 +1707,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t064",
-    "category": "terms",
+    "category": "figures",
     "title": "学毛选运动",
     "date": "-",
     "period": "1958-1961",
@@ -1722,7 +1722,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t065",
-    "category": "terms",
+    "category": "figures",
     "title": "毛泽东致江青的信",
     "date": "-",
     "period": "1966-1969",
@@ -1737,7 +1737,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t066",
-    "category": "terms",
+    "category": "documents",
     "title": "四份文件的逻辑闭环",
     "date": "-",
     "period": "1949-1952",
@@ -1752,7 +1752,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t067",
-    "category": "terms",
+    "category": "figures",
     "title": "文革第二阶段",
     "date": "-",
     "period": "1958-1961",
@@ -1767,7 +1767,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t068",
-    "category": "terms",
+    "category": "figures",
     "title": "文革第三阶段",
     "date": "-",
     "period": "1966-1969",
@@ -1782,7 +1782,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t069",
-    "category": "terms",
+    "category": "movements",
     "title": "文革的历史教训",
     "date": "-",
     "period": "1961-1965",
@@ -1797,7 +1797,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t070",
-    "category": "terms",
+    "category": "documents",
     "title": "八届十一中全会",
     "date": "-",
     "period": "1966-1969",
@@ -1812,7 +1812,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t071",
-    "category": "terms",
+    "category": "documents",
     "title": "大兴惨案、卞仲耘事件、老舍之死、傅雷之死、血统论、遇罗克与《出身论》",
     "date": "-",
     "period": "1966-1969",
@@ -1827,7 +1827,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t072",
-    "category": "terms",
+    "category": "figures",
     "title": "审查刘少奇专案",
     "date": "-",
     "period": "1949-1952",
@@ -1842,7 +1842,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t073",
-    "category": "terms",
+    "category": "documents",
     "title": "卫生革命",
     "date": "-",
     "period": "1966-1969",
@@ -1857,7 +1857,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t074",
-    "category": "terms",
+    "category": "documents",
     "title": "四届人大的召开",
     "date": "-",
     "period": "1969-1976",
@@ -1872,7 +1872,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t075",
-    "category": "terms",
+    "category": "figures",
     "title": "四五运动",
     "date": "-",
     "period": "1966-1969",
@@ -1902,7 +1902,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t077",
-    "category": "terms",
+    "category": "events",
     "title": "三砸一烧",
     "date": "-",
     "period": "1966-1969",
@@ -1917,7 +1917,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t078",
-    "category": "terms",
+    "category": "events",
     "title": "恢复联合国的一切权益",
     "date": "-",
     "period": "1958-1961",
@@ -1932,7 +1932,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t079",
-    "category": "terms",
+    "category": "documents",
     "title": "文革的独立思考",
     "date": "-",
     "period": "1966-1969",
@@ -1962,7 +1962,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t081",
-    "category": "terms",
+    "category": "events",
     "title": "后续经济建设的成效",
     "date": "-",
     "period": "1958-1961",
@@ -1977,7 +1977,7 @@ const ALL_CARDS = [
   },
   {
     "id": "t082",
-    "category": "terms",
+    "category": "events",
     "title": "知青返城",
     "date": "-",
     "period": "1961-1965",
@@ -1992,7 +1992,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s116",
-    "category": "terms",
+    "category": "documents",
     "title": "忆述史料",
     "date": "-",
     "period": "1949-1952",
@@ -2007,7 +2007,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s117",
-    "category": "terms",
+    "category": "movements",
     "title": "民间史料",
     "date": "-",
     "period": "1949-1952",
@@ -2022,7 +2022,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s118",
-    "category": "terms",
+    "category": "events",
     "title": "民族区域自治制度",
     "date": "-",
     "period": "1949-1952",
@@ -2037,7 +2037,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s119",
-    "category": "terms",
+    "category": "documents",
     "title": "《对目前时局的宣言》",
     "date": "-",
     "period": "1949-1952",
@@ -2052,7 +2052,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s120",
-    "category": "terms",
+    "category": "documents",
     "title": "双十协定《政府与中共代表会谈纪要》",
     "date": "-",
     "period": "1949-1952",
@@ -2067,7 +2067,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s121",
-    "category": "terms",
+    "category": "events",
     "title": "关于建立中央政府的时机考量",
     "date": "-",
     "period": "1949-1952",
@@ -2082,7 +2082,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s122",
-    "category": "terms",
+    "category": "documents",
     "title": "建立中央政府的准备工作",
     "date": "-",
     "period": "1949-1952",
@@ -2097,7 +2097,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s123",
-    "category": "terms",
+    "category": "meetings",
     "title": "五一口号",
     "date": "-",
     "period": "1949-1952",
@@ -2112,7 +2112,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s124",
-    "category": "terms",
+    "category": "events",
     "title": "三大战役",
     "date": "-",
     "period": "1949-1982",
@@ -2127,7 +2127,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s125",
-    "category": "terms",
+    "category": "documents",
     "title": "中国共产党七届二中全会",
     "date": "-",
     "period": "1949-1952",
@@ -2142,7 +2142,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s126",
-    "category": "terms",
+    "category": "documents",
     "title": "中共对于土地问题的初步认识",
     "date": "-",
     "period": "1949-1952",
@@ -2157,7 +2157,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s127",
-    "category": "terms",
+    "category": "documents",
     "title": "八七会议",
     "date": "-",
     "period": "1949-1952",
@@ -2172,7 +2172,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s128",
-    "category": "terms",
+    "category": "documents",
     "title": "中共六大",
     "date": "-",
     "period": "1949-1952",
@@ -2187,7 +2187,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s129",
-    "category": "terms",
+    "category": "documents",
     "title": "《中华苏维埃共和国土地法令》",
     "date": "-",
     "period": "1949-1952",
@@ -2202,7 +2202,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s130",
-    "category": "terms",
+    "category": "documents",
     "title": "《中共中央关于土地政策的指示》",
     "date": "-",
     "period": "1949-1952",
@@ -2232,7 +2232,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s132",
-    "category": "terms",
+    "category": "documents",
     "title": "《中央关于土地问题指示》（五四指示）",
     "date": "-",
     "period": "1949-1952",
@@ -2247,7 +2247,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s133",
-    "category": "terms",
+    "category": "documents",
     "title": "土改的左倾",
     "date": "-",
     "period": "1949-1952",
@@ -2262,7 +2262,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s134",
-    "category": "terms",
+    "category": "documents",
     "title": "土改的纠偏/纠左",
     "date": "-",
     "period": "1949-1952",
@@ -2277,7 +2277,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s135",
-    "category": "terms",
+    "category": "events",
     "title": "新区土改的顾虑",
     "date": "-",
     "period": "1949-1952",
@@ -2307,7 +2307,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s137",
-    "category": "terms",
+    "category": "documents",
     "title": "新中国早期法律",
     "date": "-",
     "period": "1949-1952",
@@ -2322,7 +2322,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s138",
-    "category": "terms",
+    "category": "documents",
     "title": "《中华人民共和国土地改革法》",
     "date": "-",
     "period": "1949-1952",
@@ -2337,7 +2337,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s139",
-    "category": "terms",
+    "category": "events",
     "title": "全国性土改的实践",
     "date": "-",
     "period": "1949-1952",
@@ -2382,7 +2382,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s142",
-    "category": "terms",
+    "category": "figures",
     "title": "接管大城市的经验来源",
     "date": "-",
     "period": "1969-1976",
@@ -2427,7 +2427,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s145",
-    "category": "terms",
+    "category": "movements",
     "title": "城市改造目标",
     "date": "-",
     "period": "1949-1952",
@@ -2442,7 +2442,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s146",
-    "category": "terms",
+    "category": "movements",
     "title": "搞镇反的原因",
     "date": "-",
     "period": "1949-1952",
@@ -2472,7 +2472,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s148",
-    "category": "terms",
+    "category": "movements",
     "title": "镇反革命的社会反响",
     "date": "-",
     "period": "1949-1952",
@@ -2487,7 +2487,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s149",
-    "category": "terms",
+    "category": "movements",
     "title": "毛最初搞三反原因",
     "date": "-",
     "period": "1949-1952",
@@ -2502,7 +2502,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s150",
-    "category": "terms",
+    "category": "figures",
     "title": "薄一波的三反新策略",
     "date": "-",
     "period": "1949-1952",
@@ -2532,7 +2532,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s152",
-    "category": "terms",
+    "category": "meetings",
     "title": "毛要发动三反的的原因",
     "date": "-",
     "period": "1949-1952",
@@ -2547,7 +2547,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s153",
-    "category": "terms",
+    "category": "movements",
     "title": "新中国初期官员贪腐原因",
     "date": "-",
     "period": "1949-1952",
@@ -2562,7 +2562,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s154",
-    "category": "terms",
+    "category": "movements",
     "title": "三反运动的评价",
     "date": "-",
     "period": "1949-1952",
@@ -2577,7 +2577,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s155",
-    "category": "terms",
+    "category": "events",
     "title": "第二章",
     "date": "-",
     "period": "1949-1952",
@@ -2592,7 +2592,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s156",
-    "category": "terms",
+    "category": "documents",
     "title": "近代中国的屈辱外交及其遗产",
     "date": "-",
     "period": "1949-1952",
@@ -2607,7 +2607,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s157",
-    "category": "terms",
+    "category": "figures",
     "title": "中共的应对",
     "date": "-",
     "period": "1949-1952",
@@ -2622,7 +2622,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s158",
-    "category": "terms",
+    "category": "documents",
     "title": "解放后期的态度",
     "date": "-",
     "period": "1949-1952",
@@ -2637,7 +2637,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s159",
-    "category": "terms",
+    "category": "figures",
     "title": "中共和美国的初期接触",
     "date": "-",
     "period": "1949-1952",
@@ -2652,7 +2652,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s160",
-    "category": "terms",
+    "category": "movements",
     "title": "一边倒的酝酿",
     "date": "-",
     "period": "1949-1952",
@@ -2682,7 +2682,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s162",
-    "category": "terms",
+    "category": "documents",
     "title": "清楚帝国主义的特权和控制权",
     "date": "-",
     "period": "1949-1952",
@@ -2697,7 +2697,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s163",
-    "category": "terms",
+    "category": "events",
     "title": "一些外交进展",
     "date": "-",
     "period": "1976-1982",
@@ -2727,7 +2727,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s165",
-    "category": "terms",
+    "category": "events",
     "title": "朝鲜战争的背景",
     "date": "-",
     "period": "1949-1952",
@@ -2742,7 +2742,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s166",
-    "category": "terms",
+    "category": "events",
     "title": "苏联决定的转机",
     "date": "-",
     "period": "1949-1952",
@@ -2757,7 +2757,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s167",
-    "category": "terms",
+    "category": "figures",
     "title": "斯大林选择支持金日成统一朝鲜而非毛泽东统一台湾的原因",
     "date": "-",
     "period": "1949-1952",
@@ -2772,7 +2772,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s168",
-    "category": "terms",
+    "category": "events",
     "title": "错误判断的结果",
     "date": "-",
     "period": "1949-1952",
@@ -2787,7 +2787,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s169",
-    "category": "terms",
+    "category": "meetings",
     "title": "毛泽东决心出兵背景",
     "date": "-",
     "period": "1949-1952",
@@ -2802,7 +2802,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s170",
-    "category": "terms",
+    "category": "events",
     "title": "第一场战役，解放军是胜利的，将美韩联军挡在平壤一线；第二场战役有赶到三八线附近；之后，中国的战略目标因为胜利而改变",
     "date": "-",
     "period": "1949-1952",
@@ -2817,7 +2817,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s171",
-    "category": "terms",
+    "category": "events",
     "title": "如何评价朝鲜战争",
     "date": "-",
     "period": "1953-1956",
@@ -2847,7 +2847,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s173",
-    "category": "terms",
+    "category": "documents",
     "title": "中国新民主主义",
     "date": "-",
     "period": "1949-1952",
@@ -2922,7 +2922,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s178",
-    "category": "terms",
+    "category": "events",
     "title": "政策开始转向",
     "date": "-",
     "period": "1949-1952",
@@ -2937,7 +2937,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s179",
-    "category": "terms",
+    "category": "meetings",
     "title": "对资产阶级的初步改造",
     "date": "-",
     "period": "1949-1952",
@@ -2952,7 +2952,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s180",
-    "category": "terms",
+    "category": "events",
     "title": "统一财经",
     "date": "-",
     "period": "1949-1952",
@@ -2967,7 +2967,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s181",
-    "category": "terms",
+    "category": "movements",
     "title": "城市功能变化",
     "date": "-",
     "period": "1949-1952",
@@ -2997,7 +2997,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s183",
-    "category": "terms",
+    "category": "events",
     "title": "对旧教育改革",
     "date": "-",
     "period": "1949-1952",
@@ -3012,7 +3012,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s184",
-    "category": "terms",
+    "category": "documents",
     "title": "文化艺术的重塑和批判",
     "date": "-",
     "period": "1949-1952",
@@ -3027,7 +3027,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s185",
-    "category": "terms",
+    "category": "movements",
     "title": "肃反运动",
     "date": "-",
     "period": "1953-1956",
@@ -3042,7 +3042,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s186",
-    "category": "terms",
+    "category": "movements",
     "title": "酝酿改造的原因/背景",
     "date": "-",
     "period": "1953-1956",
@@ -3057,7 +3057,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s187",
-    "category": "terms",
+    "category": "meetings",
     "title": "酝酿总路线的过程",
     "date": "-",
     "period": "1949-1952",
@@ -3072,7 +3072,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s188",
-    "category": "terms",
+    "category": "movements",
     "title": "总路线的内容",
     "date": "-",
     "period": "1953-1956",
@@ -3087,7 +3087,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s189",
-    "category": "terms",
+    "category": "events",
     "title": "总路线的本质",
     "date": "-",
     "period": "1949-1952",
@@ -3102,7 +3102,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s190",
-    "category": "terms",
+    "category": "events",
     "title": "实行粮食统购统销（53年后开始）的原因",
     "date": "-",
     "period": "1953-1956",
@@ -3207,7 +3207,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s197",
-    "category": "terms",
+    "category": "movements",
     "title": "对于土改的定位",
     "date": "-",
     "period": "1953-1956",
@@ -3222,7 +3222,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s198",
-    "category": "terms",
+    "category": "events",
     "title": "对于农业集体化的三步走设想",
     "date": "-",
     "period": "1953-1956",
@@ -3312,7 +3312,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s204",
-    "category": "terms",
+    "category": "documents",
     "title": "五反运动开始",
     "date": "-",
     "period": "1949-1952",
@@ -3327,7 +3327,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s205",
-    "category": "terms",
+    "category": "figures",
     "title": "中央派遣薄一波来给上海五反降温",
     "date": "-",
     "period": "1949-1952",
@@ -3342,7 +3342,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s206",
-    "category": "terms",
+    "category": "events",
     "title": "毛开始考虑向社会主义过渡",
     "date": "-",
     "period": "1949-1952",
@@ -3357,7 +3357,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s207",
-    "category": "terms",
+    "category": "movements",
     "title": "过渡时期总路线的公布",
     "date": "-",
     "period": "1949-1952",
@@ -3372,7 +3372,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s208",
-    "category": "terms",
+    "category": "movements",
     "title": "资本家对于总路线的看法",
     "date": "-",
     "period": "1953-1956",
@@ -3402,7 +3402,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s210",
-    "category": "terms",
+    "category": "figures",
     "title": "公私合营吃葡萄阶段1955-1957",
     "date": "-",
     "period": "1953-1956",
@@ -3417,7 +3417,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s211",
-    "category": "terms",
+    "category": "movements",
     "title": "公私合营的本质",
     "date": "-",
     "period": "1949-1952",
@@ -3447,7 +3447,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s213",
-    "category": "terms",
+    "category": "movements",
     "title": "社会主义确立的背景",
     "date": "-",
     "period": "1953-1956",
@@ -3462,7 +3462,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s214",
-    "category": "terms",
+    "category": "movements",
     "title": "一五计划（1953-57年）",
     "date": "-",
     "period": "1953-1956",
@@ -3477,7 +3477,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s215",
-    "category": "terms",
+    "category": "meetings",
     "title": "新中国首次普选和人大召开",
     "date": "-",
     "period": "1958-1961",
@@ -3492,7 +3492,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s216",
-    "category": "terms",
+    "category": "meetings",
     "title": "全国一届人大一次会议（1954年9月15日",
     "date": "-",
     "period": "1953-1956",
@@ -3507,7 +3507,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s217",
-    "category": "terms",
+    "category": "documents",
     "title": "第一部宪法的诞生",
     "date": "-",
     "period": "1953-1956",
@@ -3522,7 +3522,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s218",
-    "category": "terms",
+    "category": "documents",
     "title": "整风运动--反右派的起点",
     "date": "-",
     "period": "1956-1957",
@@ -3537,7 +3537,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s219",
-    "category": "terms",
+    "category": "figures",
     "title": "整风运动的启动",
     "date": "-",
     "period": "1949-1952",
@@ -3552,7 +3552,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s220",
-    "category": "terms",
+    "category": "documents",
     "title": "整风运动的经过",
     "date": "-",
     "period": "1956-1957",
@@ -3567,7 +3567,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s221",
-    "category": "terms",
+    "category": "documents",
     "title": "反右派布局的标志",
     "date": "-",
     "period": "1956-1957",
@@ -3582,7 +3582,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s222",
-    "category": "terms",
+    "category": "movements",
     "title": "反右派运动的展开",
     "date": "-",
     "period": "1956-1957",
@@ -3612,7 +3612,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s224",
-    "category": "terms",
+    "category": "meetings",
     "title": "反右派的影响",
     "date": "-",
     "period": "1956-1957",
@@ -3627,7 +3627,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s225",
-    "category": "terms",
+    "category": "meetings",
     "title": "南宁会议",
     "date": "-",
     "period": "1958-1961",
@@ -3642,7 +3642,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s226",
-    "category": "terms",
+    "category": "meetings",
     "title": "成都会议",
     "date": "-",
     "period": "1958-1961",
@@ -3657,7 +3657,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s227",
-    "category": "terms",
+    "category": "meetings",
     "title": "八大二次会议",
     "date": "-",
     "period": "1958-1961",
@@ -3687,7 +3687,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s229",
-    "category": "terms",
+    "category": "figures",
     "title": "大跃进",
     "date": "-",
     "period": "1958-1961",
@@ -3702,7 +3702,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s230",
-    "category": "terms",
+    "category": "movements",
     "title": "三面红旗",
     "date": "-",
     "period": "1956-1957",
@@ -3717,7 +3717,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s231",
-    "category": "terms",
+    "category": "meetings",
     "title": "总路线",
     "date": "-",
     "period": "1958-1961",
@@ -3747,7 +3747,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s233",
-    "category": "terms",
+    "category": "events",
     "title": "人民公社的制度弊端",
     "date": "-",
     "period": "1958-1961",
@@ -3762,7 +3762,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s234",
-    "category": "terms",
+    "category": "events",
     "title": "分配实行供给制",
     "date": "-",
     "period": "1958-1961",
@@ -3777,7 +3777,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s235",
-    "category": "terms",
+    "category": "documents",
     "title": "大跃进的过程",
     "date": "-",
     "period": "1956-1957",
@@ -3792,7 +3792,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s236",
-    "category": "terms",
+    "category": "movements",
     "title": "大跃进的影响和教训",
     "date": "-",
     "period": "1958-1961",
@@ -3807,7 +3807,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s237",
-    "category": "terms",
+    "category": "meetings",
     "title": "新民歌运动",
     "date": "-",
     "period": "1958-1961",
@@ -3822,7 +3822,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s238",
-    "category": "terms",
+    "category": "figures",
     "title": "技术革新运动",
     "date": "-",
     "period": "1958-1961",
@@ -3837,7 +3837,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s239",
-    "category": "terms",
+    "category": "meetings",
     "title": "纠左的会议",
     "date": "-",
     "period": "1958-1961",
@@ -3852,7 +3852,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s240",
-    "category": "terms",
+    "category": "movements",
     "title": "纠左的评价",
     "date": "-",
     "period": "1958-1961",
@@ -3867,7 +3867,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s241",
-    "category": "terms",
+    "category": "meetings",
     "title": "庐山会议",
     "date": "-",
     "period": "1958-1961",
@@ -3882,7 +3882,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s242",
-    "category": "terms",
+    "category": "meetings",
     "title": "庐山会议的影响",
     "date": "-",
     "period": "1956-1957",
@@ -3897,7 +3897,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s243",
-    "category": "terms",
+    "category": "movements",
     "title": "反右倾运动",
     "date": "-",
     "period": "1958-1961",
@@ -3912,7 +3912,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s244",
-    "category": "terms",
+    "category": "meetings",
     "title": "反右倾的后果",
     "date": "-",
     "period": "1958-1961",
@@ -3927,7 +3927,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s245",
-    "category": "terms",
+    "category": "events",
     "title": "经济危机的结果",
     "date": "-",
     "period": "1958-1961",
@@ -3987,7 +3987,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s249",
-    "category": "terms",
+    "category": "events",
     "title": "城乡二元结构",
     "date": "-",
     "period": "1958-1961",
@@ -4032,7 +4032,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s252",
-    "category": "terms",
+    "category": "documents",
     "title": "农业六十条",
     "date": "-",
     "period": "1958-1961",
@@ -4047,7 +4047,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s253",
-    "category": "terms",
+    "category": "documents",
     "title": "七千人大会的过程",
     "date": "-",
     "period": "1961-1965",
@@ -4062,7 +4062,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s254",
-    "category": "terms",
+    "category": "meetings",
     "title": "七千人大会的意义",
     "date": "-",
     "period": "1961-1965",
@@ -4107,7 +4107,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s257",
-    "category": "terms",
+    "category": "documents",
     "title": "中苏两党论战",
     "date": "-",
     "period": "1953-1956",
@@ -4122,7 +4122,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s258",
-    "category": "terms",
+    "category": "events",
     "title": "中苏分歧核心要点",
     "date": "-",
     "period": "1958-1961",
@@ -4137,7 +4137,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s259",
-    "category": "terms",
+    "category": "figures",
     "title": "毛泽东国际反修、国内防修的逻辑",
     "date": "-",
     "period": "1961-1965",
@@ -4152,7 +4152,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s260",
-    "category": "terms",
+    "category": "documents",
     "title": "城市“五反”运动",
     "date": "-",
     "period": "1961-1965",
@@ -4182,7 +4182,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s262",
-    "category": "terms",
+    "category": "movements",
     "title": "农村小四清运动",
     "date": "-",
     "period": "1961-1965",
@@ -4197,7 +4197,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s263",
-    "category": "terms",
+    "category": "documents",
     "title": "《关于目前农村工作中若干问题的决定（草案）》（前十条）",
     "date": "-",
     "period": "1961-1965",
@@ -4212,7 +4212,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s264",
-    "category": "terms",
+    "category": "documents",
     "title": "《关于农村社会主义教育运动中的一些具体政策规定（草案）》（后十条）",
     "date": "-",
     "period": "1961-1965",
@@ -4227,7 +4227,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s265",
-    "category": "terms",
+    "category": "documents",
     "title": "城市五反运动的铺开，刘少奇的挂帅",
     "date": "-",
     "period": "1961-1965",
@@ -4242,7 +4242,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s266",
-    "category": "terms",
+    "category": "movements",
     "title": "桃园经验",
     "date": "-",
     "period": "1961-1965",
@@ -4257,7 +4257,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s267",
-    "category": "terms",
+    "category": "documents",
     "title": "刘少奇全面主持四清、五反",
     "date": "-",
     "period": "1961-1965",
@@ -4272,7 +4272,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s268",
-    "category": "terms",
+    "category": "movements",
     "title": "后十条从温和到激进的转折",
     "date": "-",
     "period": "1961-1965",
@@ -4287,7 +4287,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s269",
-    "category": "terms",
+    "category": "movements",
     "title": "大兵团作战",
     "date": "-",
     "period": "1961-1965",
@@ -4302,7 +4302,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s270",
-    "category": "terms",
+    "category": "movements",
     "title": "运动工作队来源",
     "date": "-",
     "period": "1961-1965",
@@ -4317,7 +4317,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s271",
-    "category": "terms",
+    "category": "meetings",
     "title": "运动中的高层分歧",
     "date": "-",
     "period": "1961-1965",
@@ -4332,7 +4332,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s272",
-    "category": "terms",
+    "category": "movements",
     "title": "二十三条",
     "date": "-",
     "period": "1961-1965",
@@ -4347,7 +4347,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s273",
-    "category": "terms",
+    "category": "movements",
     "title": "城乡社教运动的影响",
     "date": "-",
     "period": "1966-1969",
@@ -4362,7 +4362,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s274",
-    "category": "terms",
+    "category": "documents",
     "title": "批判小说《刘志丹》",
     "date": "-",
     "period": "1953-1956",
@@ -4377,7 +4377,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s275",
-    "category": "terms",
+    "category": "figures",
     "title": "对反党小说的批判",
     "date": "-",
     "period": "1976-1982",
@@ -4392,7 +4392,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s276",
-    "category": "terms",
+    "category": "meetings",
     "title": "大写十三年",
     "date": "-",
     "period": "1961-1965",
@@ -4407,7 +4407,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s277",
-    "category": "terms",
+    "category": "documents",
     "title": "迎春晚会事件",
     "date": "-",
     "period": "1961-1965",
@@ -4422,7 +4422,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s278",
-    "category": "terms",
+    "category": "documents",
     "title": "被批判的作品",
     "date": "-",
     "period": "1961-1965",
@@ -4437,7 +4437,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s279",
-    "category": "terms",
+    "category": "documents",
     "title": "《东方红》",
     "date": "-",
     "period": "1961-1965",
@@ -4467,7 +4467,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s281",
-    "category": "terms",
+    "category": "movements",
     "title": "批判孙冶方的经济思想",
     "date": "-",
     "period": "1976-1982",
@@ -4482,7 +4482,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s282",
-    "category": "terms",
+    "category": "documents",
     "title": "批判翦伯赞的史学观点",
     "date": "-",
     "period": "1961-1965",
@@ -4497,7 +4497,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s283",
-    "category": "terms",
+    "category": "movements",
     "title": "批判斯霞“爱的教育”的观点",
     "date": "-",
     "period": "1966-1969",
@@ -4527,7 +4527,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s285",
-    "category": "terms",
+    "category": "meetings",
     "title": "三线建设",
     "date": "-",
     "period": "1961-1965",
@@ -4572,7 +4572,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s288",
-    "category": "terms",
+    "category": "figures",
     "title": "写四史",
     "date": "-",
     "period": "1961-1965",
@@ -4587,7 +4587,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s289",
-    "category": "terms",
+    "category": "documents",
     "title": "高玉宝的《半夜鸡叫》",
     "date": "-",
     "period": "1949-1982",
@@ -4602,7 +4602,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s290",
-    "category": "terms",
+    "category": "documents",
     "title": "泥塑《收租院》",
     "date": "-",
     "period": "1961-1965",
@@ -4617,7 +4617,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s291",
-    "category": "terms",
+    "category": "figures",
     "title": "不爱红装爱武装",
     "date": "-",
     "period": "1958-1961",
@@ -4632,7 +4632,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s292",
-    "category": "terms",
+    "category": "movements",
     "title": "日常生活的革命",
     "date": "-",
     "period": "1961-1965",
@@ -4647,7 +4647,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s293",
-    "category": "terms",
+    "category": "movements",
     "title": "文革带来的危害",
     "date": "-",
     "period": "1966-1969",
@@ -4662,7 +4662,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s294",
-    "category": "terms",
+    "category": "documents",
     "title": "《五七指示》",
     "date": "-",
     "period": "1966-1969",
@@ -4677,7 +4677,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s295",
-    "category": "terms",
+    "category": "figures",
     "title": "毛泽东与卡博、巴卢库的谈话",
     "date": "-",
     "period": "1966-1969",
@@ -4692,7 +4692,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s296",
-    "category": "terms",
+    "category": "figures",
     "title": "两件事",
     "date": "-",
     "period": "1956-1957",
@@ -4707,7 +4707,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s297",
-    "category": "terms",
+    "category": "figures",
     "title": "文革第一阶段",
     "date": "-",
     "period": "1966-1969",
@@ -4722,7 +4722,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s298",
-    "category": "terms",
+    "category": "movements",
     "title": "文革的历史背景和起因",
     "date": "-",
     "period": "1961-1965",
@@ -4737,7 +4737,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s299",
-    "category": "terms",
+    "category": "movements",
     "title": "以上两个事情的影响",
     "date": "-",
     "period": "1966-1969",
@@ -4752,7 +4752,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s300",
-    "category": "terms",
+    "category": "documents",
     "title": "中共中央政治局扩大会议（1966年5月4日至26日）",
     "date": "-",
     "period": "1966-1969",
@@ -4767,7 +4767,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s301",
-    "category": "terms",
+    "category": "documents",
     "title": "《五一六通知》",
     "date": "-",
     "period": "1966-1969",
@@ -4782,7 +4782,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s302",
-    "category": "terms",
+    "category": "documents",
     "title": "第一张大字报",
     "date": "-",
     "period": "1966-1969",
@@ -4797,7 +4797,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s303",
-    "category": "terms",
+    "category": "documents",
     "title": "破四旧",
     "date": "-",
     "period": "1966-1969",
@@ -4812,7 +4812,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s304",
-    "category": "terms",
+    "category": "movements",
     "title": "破四旧的影响",
     "date": "-",
     "period": "1958-1961",
@@ -4827,7 +4827,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s305",
-    "category": "terms",
+    "category": "documents",
     "title": "大串联",
     "date": "-",
     "period": "1966-1969",
@@ -4842,7 +4842,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s306",
-    "category": "terms",
+    "category": "movements",
     "title": "复课闹革命",
     "date": "-",
     "period": "1966-1969",
@@ -4857,7 +4857,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s307",
-    "category": "terms",
+    "category": "movements",
     "title": "红卫兵运动的结束",
     "date": "-",
     "period": "1966-1969",
@@ -4872,7 +4872,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s308",
-    "category": "terms",
+    "category": "meetings",
     "title": "中共中央工作会议",
     "date": "-",
     "period": "1966-1969",
@@ -4887,7 +4887,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s309",
-    "category": "terms",
+    "category": "events",
     "title": "批斗各级党政领导人",
     "date": "-",
     "period": "1966-1969",
@@ -4902,7 +4902,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s310",
-    "category": "terms",
+    "category": "figures",
     "title": "造反派",
     "date": "-",
     "period": "1966-1969",
@@ -4917,7 +4917,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s311",
-    "category": "terms",
+    "category": "documents",
     "title": "公安六条的影响",
     "date": "-",
     "period": "1966-1969",
@@ -4932,7 +4932,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s312",
-    "category": "terms",
+    "category": "movements",
     "title": "右倾翻案风",
     "date": "-",
     "period": "1966-1969",
@@ -4947,7 +4947,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s313",
-    "category": "terms",
+    "category": "figures",
     "title": "“杨、余、傅事件”",
     "date": "-",
     "period": "1966-1969",
@@ -4962,7 +4962,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s314",
-    "category": "terms",
+    "category": "events",
     "title": "斗、批、改的标志性措施",
     "date": "-",
     "period": "1966-1969",
@@ -4977,7 +4977,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s315",
-    "category": "terms",
+    "category": "movements",
     "title": "六厂二校经验",
     "date": "-",
     "period": "1966-1969",
@@ -4992,7 +4992,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s316",
-    "category": "terms",
+    "category": "documents",
     "title": "清理阶级队伍",
     "date": "-",
     "period": "1966-1969",
@@ -5007,7 +5007,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s317",
-    "category": "terms",
+    "category": "documents",
     "title": "五七干校",
     "date": "-",
     "period": "1966-1969",
@@ -5022,7 +5022,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s318",
-    "category": "terms",
+    "category": "documents",
     "title": "五七干校评价",
     "date": "-",
     "period": "1976-1982",
@@ -5037,7 +5037,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s319",
-    "category": "terms",
+    "category": "documents",
     "title": "教育革命",
     "date": "-",
     "period": "1966-1969",
@@ -5052,7 +5052,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s320",
-    "category": "terms",
+    "category": "documents",
     "title": "七二一指示",
     "date": "-",
     "period": "1966-1969",
@@ -5067,7 +5067,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s321",
-    "category": "terms",
+    "category": "documents",
     "title": "七二一大学",
     "date": "-",
     "period": "1969-1976",
@@ -5082,7 +5082,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s322",
-    "category": "terms",
+    "category": "documents",
     "title": "知识青年上山下乡",
     "date": "-",
     "period": "1953-1956",
@@ -5097,7 +5097,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s323",
-    "category": "terms",
+    "category": "figures",
     "title": "知青上山下乡运动的原因",
     "date": "-",
     "period": "1949-1952",
@@ -5112,7 +5112,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s324",
-    "category": "terms",
+    "category": "movements",
     "title": "知青上山下乡影响",
     "date": "-",
     "period": "1966-1969",
@@ -5127,7 +5127,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s325",
-    "category": "terms",
+    "category": "documents",
     "title": "文艺革命",
     "date": "-",
     "period": "1966-1969",
@@ -5142,7 +5142,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s326",
-    "category": "terms",
+    "category": "movements",
     "title": "文艺革命影响",
     "date": "-",
     "period": "1966-1969",
@@ -5157,7 +5157,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s327",
-    "category": "terms",
+    "category": "documents",
     "title": "农村合作医疗制度",
     "date": "-",
     "period": "1966-1969",
@@ -5187,7 +5187,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s329",
-    "category": "terms",
+    "category": "documents",
     "title": "中共九大",
     "date": "-",
     "period": "1966-1969",
@@ -5202,7 +5202,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s330",
-    "category": "terms",
+    "category": "figures",
     "title": "批陈整风",
     "date": "-",
     "period": "1969-1976",
@@ -5217,7 +5217,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s331",
-    "category": "terms",
+    "category": "events",
     "title": "联合舰队",
     "date": "-",
     "period": "1966-1969",
@@ -5232,7 +5232,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s332",
-    "category": "terms",
+    "category": "meetings",
     "title": "九一三事件",
     "date": "-",
     "period": "1969-1976",
@@ -5247,7 +5247,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s333",
-    "category": "terms",
+    "category": "meetings",
     "title": "林彪事件的影响",
     "date": "-",
     "period": "1969-1976",
@@ -5262,7 +5262,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s334",
-    "category": "terms",
+    "category": "documents",
     "title": "批林整风运动",
     "date": "-",
     "period": "1969-1976",
@@ -5277,7 +5277,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s335",
-    "category": "terms",
+    "category": "documents",
     "title": "批林批孔的运动",
     "date": "-",
     "period": "1969-1976",
@@ -5292,7 +5292,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s336",
-    "category": "terms",
+    "category": "movements",
     "title": "批林批孔运动的影响",
     "date": "-",
     "period": "1969-1976",
@@ -5307,7 +5307,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s337",
-    "category": "terms",
+    "category": "documents",
     "title": "《1975年国务院政府工作报告》",
     "date": "-",
     "period": "1969-1976",
@@ -5322,7 +5322,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s338",
-    "category": "terms",
+    "category": "figures",
     "title": "全面整顿",
     "date": "-",
     "period": "1969-1976",
@@ -5337,7 +5337,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s339",
-    "category": "terms",
+    "category": "documents",
     "title": "批邓、反击右倾翻案风运动",
     "date": "-",
     "period": "1969-1976",
@@ -5352,7 +5352,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s340",
-    "category": "terms",
+    "category": "figures",
     "title": "对五四运动的错误镇压",
     "date": "-",
     "period": "1969-1976",
@@ -5367,7 +5367,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s341",
-    "category": "terms",
+    "category": "figures",
     "title": "粉碎四人帮",
     "date": "-",
     "period": "1969-1976",
@@ -5382,7 +5382,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s342",
-    "category": "terms",
+    "category": "events",
     "title": "年中苏边界冲突",
     "date": "-",
     "period": "1949-1952",
@@ -5412,7 +5412,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s344",
-    "category": "terms",
+    "category": "meetings",
     "title": "三个世界理论",
     "date": "-",
     "period": "1969-1976",
@@ -5427,7 +5427,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s345",
-    "category": "terms",
+    "category": "figures",
     "title": "三个世界的理论的演变",
     "date": "-",
     "period": "1949-1952",
@@ -5442,7 +5442,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s346",
-    "category": "terms",
+    "category": "documents",
     "title": "两个凡是",
     "date": "-",
     "period": "1976-1982",
@@ -5457,7 +5457,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s347",
-    "category": "terms",
+    "category": "figures",
     "title": "华国锋时期",
     "date": "-",
     "period": "1976-1982",
@@ -5472,7 +5472,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s348",
-    "category": "terms",
+    "category": "figures",
     "title": "关于经济建设新冒进的指出",
     "date": "-",
     "period": "1976-1982",
@@ -5502,7 +5502,7 @@ const ALL_CARDS = [
   },
   {
     "id": "s350",
-    "category": "terms",
+    "category": "documents",
     "title": "包产到户争论的过程",
     "date": "-",
     "period": "1976-1982",
